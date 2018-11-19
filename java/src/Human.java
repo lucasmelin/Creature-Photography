@@ -21,7 +21,7 @@ public class Human {
         System.out.println(creature.name + " runs away with a speed of " + evasionSpeed);
 
         if (shutterSpeed >= evasionSpeed) {
-            System.out.println("You check your camera, and you have a clear picture of the " + creature.name + " !");
+            System.out.println("You check your camera, and you have a clear picture of the " + creature.name + "!");
             return true;
         } else{
             System.out.println("You check your camera, but the picture is blurry.");

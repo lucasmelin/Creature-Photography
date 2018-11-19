@@ -50,6 +50,10 @@ def game_loop():
             print("Exiting game")
             break
 
+        if not creatures:
+            print("You've photographed all the creatures!")
+            break
+
 
 if __name__ == '__main__':
     main()

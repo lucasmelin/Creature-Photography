@@ -42,7 +42,7 @@ public class Program {
                     + " has emerged from the jungle...");
 
 
-            System.out.println("Do you [p]hotograph, [r]un away, or [l]ook around?");
+            System.out.println("Do you [p]hotograph, [r]eposition, or [l]ook around?");
             String action = input.next();
 
             switch (action) {
@@ -60,7 +60,7 @@ public class Program {
                     }
                     break;
                 case "r":
-                    System.out.println("Run away");
+                    System.out.println("Reposition");
                     break;
                 case "l":
                     System.out.println("The photographer " + photographer.name + " scans the area and spots:");
@@ -73,6 +73,11 @@ public class Program {
                     running = false;
                     break;
 
+            }
+
+            if (creatures.isEmpty()){
+                System.out.println("You've photographed all the creatures!");
+                running = false;
             }
 
         }
