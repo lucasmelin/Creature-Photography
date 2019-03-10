@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * This file contains the photography game logic that drives the application.
  *
  * Date created: Nov 15, 2018
- * Date last modified: Nov 20, 2018
+ * Date last modified: Mar 09, 2018
  * @version Java 1.8
  * @author Lucas Melin
  */
@@ -60,7 +60,7 @@ public class Program {
         creatures.add(new SmallAnimal("Tree frog", 6));
         creatures.add(new Creature("Chimpanzee", 20));
         creatures.add(new CamouflagedAnimal("Zebra", 45, 2, false));
-        creatures.add(new CamouflagedAnimal("Cheetah", 100, 6, false));
+        creatures.add(new CamouflagedAnimal("Cheetah", 80, 6, false));
         creatures.add(new CamouflagedAnimal("Chameleon", 2, 10, true));
 
         // Humans also inherit from the base class Creature

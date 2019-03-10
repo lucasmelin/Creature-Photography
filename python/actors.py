@@ -4,7 +4,7 @@
 File name: actors.py
 Author: Lucas Melin
 Date created: Nov 15, 2018
-Date last modified: Nov 20, 2018
+Date last modified: Mar 09, 2019
 Python version: 3.7
 
 This file contains all the actors used in the photography game, such as the Creature
@@ -32,7 +32,7 @@ class Creature:
         on a Creature object
         :return: a string representation of the creature's name and speed
         """
-        return 'Creature {} with a speed of {}'.format(self.name, self.speed)
+        return f'Creature {self.name} with a speed of {self.speed}'
 
     def get_total_speed(self):
         """
@@ -58,7 +58,7 @@ class Human(Creature):
         :return: true if the picture was taken successfully, false otherwise
         """
         # We can refer to `self.name` without having to reference the base type first
-        print("{} attempts to photograph {}".format(self.name, creature.name))
+        print(f'{self.name} attempts to photograph {creature.name}')
 
         # Calls the base type's `get_total_speed` method
         shutter_speed = self.get_total_speed()
@@ -66,14 +66,14 @@ class Human(Creature):
         # will call the `get_total_speed` method in the Creature base type
         evasion_speed = creature.get_total_speed()
 
-        print('You snap a picture with a speed of {}'.format(self.speed))
-        print('{} runs away with a speed of {}'.format(creature.name, creature.speed))
+        print(f'You snap a picture with a speed of {shutter_speed}')
+        print(f'{creature.name} runs away with a speed of {evasion_speed}')
 
         if shutter_speed >= evasion_speed:
-            print('You check your camera, and you have a clear picture of the {}!'.format(creature.name))
+            print(f'You check your camera, and you have a clear picture of the {creature.name}!\n')
             return True
         else:
-            print('You check your camera, but the picture is blurry.')
+            print('You check your camera, but the picture is blurry.\n')
             return False
 
 
